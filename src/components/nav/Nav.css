@@ -1,0 +1,32 @@
+header {
+  display: flex;
+  /* position: fixed; */
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 1rem 7rem auto;
+  padding: 1rem;
+  width: fit-content;
+  height: 5rem;
+  width: 20%;
+  min-width: 250px;
+  /* top: 1rem; */
+  /* right: 3rem; */
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+header > section {
+  transition: all 0.5s;
+}
+
+header:hover {
+  width: 80%;
+  height: 8rem;
+}
+header:hover > section {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}

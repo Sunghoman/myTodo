@@ -23,9 +23,13 @@ export const Weather = () => {
 
   return(
     <div className='weatherBox'>
-      <Timer/>
-      <h1>{data?.data?.main?.temp}℃</h1>
+      <span>{data?.data?.sys?.country}</span>
+      <h1>{Math.round(data?.data?.main?.temp)}℃</h1>
       <p>{data?.data?.weather[0]?.main}</p>
+      <div className='temp'>
+        <span>최고: {data?.data?.main?.temp_max}℃</span>      
+        <span>최저: {data?.data?.main?.temp_min}℃</span>
+      </div>
       <p>바람: {data?.data?.wind?.speed}</p>
     </div>
   )
