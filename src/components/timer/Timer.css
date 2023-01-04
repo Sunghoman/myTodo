@@ -1,0 +1,13 @@
+.dateContainer {
+  text-align: center;
+}
+
+.dateContainer > span {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.dateContainer > h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}

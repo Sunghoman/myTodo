@@ -1,6 +1,7 @@
 import './Weather.css'
 import { useQuery } from "react-query"
 import axios from 'axios'
+import { Timer } from '../timer/Timer';
 
 export const Weather = () => {
   const API_KEY = '222e7197c6498dd6ede62a9fe39c3dee';
@@ -22,7 +23,10 @@ export const Weather = () => {
 
   return(
     <div className='weatherBox'>
-      <h1>{data?.data?.sys?.country}</h1>
+      <Timer/>
+      <h1>{data?.data?.main?.temp}℃</h1>
+      <p>{data?.data?.weather[0]?.main}</p>
+      <p>바람: {data?.data?.wind?.speed}</p>
     </div>
   )
 }
